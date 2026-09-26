@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>ARES WARGOD Overlay</title>
+
+<style>
+
+/* =====================================
+   PAGE
+   ===================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: transparent;  
+}
+
+
+/* =====================================
+   9:16 OVERLAY FRAME
+   ===================================== */
+
+.overlay-container {
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(100vw, 56.25vh);
+
+    height: min(177.7778vw, 100vh);
+
+    aspect-ratio: 9 / 16;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   ORIGINAL OVERLAY IMAGE
+   ===================================== */
+
+.overlay {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    pointer-events: none;
+}
+
+
+/* =====================================
+   COMMON TEXT STYLE
+   ===================================== */
+
+.stat {
+
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+ 
+    justify-content: center;
+
+    align-items: flex-start;
+
+    text-align: right;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+    line-height: 1.05;
+
+    text-shadow:
+        0 0 3px #000000,
+        0 0 6px #ffffff;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   ⭐ RECENT SUB
+   STAR PANEL CENTER
+   ===================================== */
+
+.recent-sub {
+
+    top: 4.65%;
+
+    left: 17%;
+
+    width: 21%;
+
+    height: 3.4%;
+}
+
+
+/* =====================================
+   $ RECENT DONO
+   DOLLAR PANEL CENTER
+   ===================================== */
+
+.recent-dono {
+
+    top: 4.65%;
+
+    left: 41%;
+
+    width: 23%;
+
+    height: 3.4%;
+}
+
+
+/* =====================================
+   👑 TOP DONO
+   CROWN PANEL CENTER
+   ===================================== */
+
+.top-dono {
+
+    top: 4.65%;
+
+    left: 70%;
+
+    width: 24%;
+
+    height: 3.4%;
+}
+
+
+/* =====================================
+   LABEL
+   ===================================== */
+
+.label {
+
+    font-size: 8px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =====================================
+   VALUE
+   ===================================== */
+
+.value {
+
+    margin-top: 2px;
+
+    font-size: 7px;
+
+    color: #ff2020;
+
+    letter-spacing: 0.2px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="overlay-container">
+
+
+    <!-- ORIGINAL OVERLAY -->
+
+    <img
+        src="overlay.png"
+        class="overlay"
+        alt="ARES WARGOD Overlay"
+    >
+
+
+    <!-- ⭐ RECENT SUB -->
+
+    <div class="stat recent-sub">
+
+        <div class="label">
+            RECENT SUB:
+        </div>
+
+        <div class="value">
+            PLAYER NAME
+        </div>
+
+    </div>
+
+
+    <!-- $ RECENT DONO -->
+
+    <div class="stat recent-dono">
+
+        <div class="label">
+            RECENT SUPERCHAT:
+        </div>
+
+        <div class="value">
+            SUPERCHAT AMOUNT
+        </div>
+
+    </div>
+
+
+    <!-- 👑 TOP DONO -->
+
+    <div class="stat top-dono">
+
+        <div class="label">
+            TOP SUPERCHAT:
+        </div>
+
+        <div class="value">
+            TOP CHAT
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>
